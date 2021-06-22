@@ -31,7 +31,25 @@ class Desafio {
             double a = double.Parse(s[0]);
             double b = double.Parse(s[1]);
             double c = double.Parse(s[2]);
-
+            
+            if (a < b) {
+              double aux = a;
+              a = b;
+              b = aux;
+            }
+            
+            if (b < c) {
+              double aux = b;
+              b = c;
+              c = aux;
+            }
+            
+            if (a < c) {
+              double aux = a;
+              a = c;
+              c = aux;
+            }
+            
               //continue a solucao
             if (a >= (b+c) )
                 Console.WriteLine("NAO FORMA TRIANGULO");
@@ -49,7 +67,3 @@ class Desafio {
             Console.ReadLine();
         }
 }
-
-
-//primeiro valor de validação Dado de entrada:
-//12.0 20.0 16.0
